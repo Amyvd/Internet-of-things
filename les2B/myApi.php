@@ -13,6 +13,9 @@
      
         
         $myTime = time(); // get the server time
+        $image = "https://www.thesun.co.uk/wp-content/uploads/2020/08/NINTCHDBPICT000600110174.jpg";
+        $image2 = "https://c625951.ssl.cf3.rackcdn.com/products/10/25/230/300x200/millies-kaasknabbels.jpg";
+        $video = "https://www.youtube.com/watch?v=4rG4zgzh5H0";
 
 		if (!empty($_GET['data'])){  
             $dataFromGet= $_GET['data'];
@@ -31,14 +34,30 @@
                  // hier moet jij zelf code schrijven
                     
                 case "easter egg":
-                    print " <br> hier moet jij zelf code schrijven";
+                    print " <br> Welkom!! ";
+                    print " <br> Nu heb je op het tekst balkje de code Easter egg ingetypt. ";
+                    print " <br> .............. ";
+                    print " <br> Mijn naam is Amy van duin. ";
+                    print " <br> Ik ben 17 jaar oud en zit op het Mediacollege Amsterdam. ";
+                    echo "<img src='{$image}'>";
                     break;
-                case "bedenk zelf een code":
-                    // jouw code hier
+                case "kaasknabbel":
+                    print " <br> Ik hou van kaasknabbels ";
+                    echo " <img src='{$image2}'>";
+                    break;
+                case "video":
+                    print " <br> Hallo nu krijg je een video te zien<br>";
+                    echo $video;
+                    break;
+                case "datum":
+                    echo "Today is " . date("Y/m/d") . "<br>";
                     break;
                   // einde eigen code  
                 default:
                     print "<h3>please read the manual for valid requests &#128540;</h3>";
+                    
             }
         }     
 ?>
+
+
